@@ -1,0 +1,70 @@
+// EDIT MODAL
+// ==============================
+
+#edit-modal{
+    display: none;
+    &.visible {
+        display: flex;
+        justify-content: center;
+    }
+    .shadow {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $color-black;
+        opacity: 0.8;
+        overflow: hidden;
+    }
+    .modal {
+        position: absolute;
+        z-index: 20;
+        background: $color-white;
+        color: $color-black;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 0 15px $color-black;
+
+        .left-pane {
+            label {
+                width: 80px;
+            }
+            input,
+            select {
+                width: 230px;
+            }
+        }
+
+        .right-pane {
+            @include breakpoint-min($bp-large) {
+                margin-left: 30px;
+            }
+            label {
+                width: 80px;
+            }
+
+            input,
+            textarea {
+                width: 500px;
+            }
+
+            #hours-edit-control {
+                label {
+                    width: 80px;
+                    @include breakpoint-min($bp-large) {
+                        width: 68px;
+                    }
+                }
+                input {
+                    width: 80px;
+                }
+            }
+
+            #save-button {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

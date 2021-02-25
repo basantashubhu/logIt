@@ -1,0 +1,43 @@
+// BASE
+// ==============================
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $color-white;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+main {
+    flex: 1;
+}
+
+.page-title,
+.button-container {
+    margin: 50px 0;
+    text-align: center;
+    #complete {
+        margin-bottom: 50px;
+    }
+
+}

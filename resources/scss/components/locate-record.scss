@@ -1,0 +1,50 @@
+// LOCATE RECORD
+// ==============================
+
+#locate-record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+    margin: 30px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    color: $color-black;
+    border: 1px solid black;
+    .combobox {
+        position: relative;
+    }
+    .combobox-toggle {
+        position: absolute;
+        background: red;
+        right: 0;
+        top: 50%;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 15px;
+        width: 100%;
+        background-color: $color-gray-light;
+        color: $color-black;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        margin: 30px;
+
+        .form-control {
+            flex-direction: column;
+            align-items: center;
+            // margin: 0 15px;
+
+            label {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

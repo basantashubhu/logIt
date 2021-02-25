@@ -1,0 +1,84 @@
+// TIME TABLE
+// ==============================
+
+#time-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 0.25rem;
+    color: $color-black;
+    border: 1px solid black;
+
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 50px;
+
+        td {
+            border: 1px solid $color-black;
+            text-align: center;
+        }
+
+        thead {
+            background-color: $color-gray-dark;
+            color: $color-white;
+
+            td {
+                font-size: 16px;
+                padding: 15px 30px;
+                font-weight: 400;
+
+                &.edit,
+                &.hours {
+                    width: 5%;
+                }
+
+                &.job {
+                    width: 20%;
+                }
+
+                &.comment {
+                    width: 30%;
+                }
+            }
+        }
+
+        .clone-container {
+            display: none;
+        }
+
+        tbody {
+
+            tr {
+                &:nth-of-type(even) {
+                    background: $color-gray-lightest;
+                }
+
+                td {
+                    font-size: 14px;
+                    padding: 10px 0;
+                    @include breakpoint-min(1100px) {
+                        &.comment {
+                            text-align: left;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            tr.total-row {
+                background: transparent;
+
+                td {
+                    font-weight: 700;
+                    border: none;
+                }
+            }
+        }
+    }
+}
